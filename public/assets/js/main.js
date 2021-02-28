@@ -22,7 +22,7 @@ if (document.getElementById("sideNav-recipies") != null) {
 			) {
 				document.getElementById("sideNav-recipies-chevron").style.transform =
 					"rotate(180deg)";
-				document.querySelector(".sideNavDropdown").style.height = "106px";
+				document.querySelector(".sideNavDropdown").style.height = "90px";
 				document.querySelector(".sideNavDropdown").style.opacity = "1";
 				document
 					.querySelector(".sideNavDropdownToggle")
@@ -39,4 +39,3 @@ if (document.getElementById("sideNav-recipies") != null) {
 		});
 }
 //  <div class="align-baseline mx-auto no-grow offset-1 flex flex-row position-absolute"></div>
-

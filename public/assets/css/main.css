@@ -21,6 +21,7 @@
 	white-space: nowrap;
 	color: rgb(21, 21, 21);
 }
+
 .italic {
 	font-style: italic;
 }
@@ -54,7 +55,9 @@
 	white-space: nowrap;
 	color: rgb(247, 247, 247);
 }
-
+.navbar-Text.small {
+	font-size: 18px;
+}
 .navbarToggle-svg {
 	fill: none;
 	stroke: rgb(21, 21, 21);
@@ -116,8 +119,10 @@
 	border-left: none;
 	border-bottom: none;
 	width: fit-content;
+	width: -moz-fit-content;
 	height: 16px;
 	transition: 0.3s;
+	transform-origin: center center;
 }
 .dropdown.show .dropdown-toggle::after {
 	transform: rotate(180deg);
@@ -127,8 +132,10 @@
 	border-left: none;
 	border-bottom: none;
 	width: fit-content;
+	width: -moz-fit-content;
 	height: 16px;
 	transition: 0.3s;
+	transform-origin: center center;
 }
 .dropdown:hover .dropdown-toggle::after {
 	content: url(../img/icons/chevron-hover.svg);
@@ -146,6 +153,8 @@
 @media screen and (max-width: 991px) {
 	.home-page-landing {
 		min-height: fit-content;
+		min-height: -moz-fit-content;
+		
 	}
 }
 .description-bg {
