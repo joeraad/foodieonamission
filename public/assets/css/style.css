@@ -1,0 +1,164 @@
+.alert-error {
+	color: #a94442;
+	background-color: #f2dede;
+	border-color: #ebccd1;
+}
+.alert-sucess {
+	color: #3c763d;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+}
+.icon-tick {
+	width: 15px;
+	float: right;
+}
+.video-link-viewed {
+	color: green;
+}
+
+.video-link {
+	color: #0000ee;
+}
+.test-ul {
+	list-style-position: outside;
+	border-color: indigo;
+	border-radius: 5px;
+	border-style: solid;
+}
+.test-li {
+	border-color: transparent;
+}
+.item-list {
+	display: grid;
+	overflow: hidden;
+	list-style-type: none;
+}
+.btn-folders {
+	margin-right: 10px;
+}
+.btn-videos {
+	margin-right: 10px;
+}
+
+.form-elegant .font-small {
+	font-size: 0.8rem;
+}
+
+.form-elegant .z-depth-1a {
+	-webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26),
+		0 4px 12px 0 rgba(121, 155, 254, 0.25);
+	box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26),
+		0 4px 12px 0 rgba(121, 155, 254, 0.25);
+}
+
+.form-elegant .z-depth-1-half,
+.form-elegant .btn:hover {
+	-webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28),
+		0 4px 15px 0 rgba(36, 133, 255, 0.15);
+	box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28),
+		0 4px 15px 0 rgba(36, 133, 255, 0.15);
+}
+
+.form-elegant .modal-header {
+	border-bottom: none;
+}
+
+.modal-dialog .form-elegant .btn .fab {
+	color: #2196f3 !important;
+}
+
+.form-elegant .modal-body,
+.form-elegant .modal-footer {
+	font-weight: 400;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* external css: flickity.css */
+* {
+	box-sizing: border-box;
+}
+
+.carousel {
+	contain: true;
+}
+
+.carousel img {
+	display: block;
+	height: 200px;
+}
+
+@media screen and (min-width: 768px) {
+	.carousel img {
+		height: 200px;
+		margin: 0 15px;
+	}
+}
+.flickity-prev-next-button {
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+	background: #333;
+}
+.flickity-prev-next-button:hover {
+	background: #f90;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+	fill: black;
+}
+.flickity-prev-next-button.no-svg {
+	color: white;
+}
+/* position outside */
+.flickity-prev-next-button.previous {
+	left: -40px;
+}
+.flickity-prev-next-button.next {
+	right: -40px;
+}
+/* external css: flickity.css */
+/* 
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+.carousel {
+	background: #fafafa;
+}
+
+.carousel-cell {
+	width: 28%;
+	height: 200px;
+	margin-right: 10px;
+	background: #8c8;
+	border-radius: 5px;
+	counter-increment: carousel-cell;
+} */
+
+/* cell number */
+/* .carousel-cell:before {
+	display: block;
+	text-align: center;
+	content: counter(carousel-cell);
+	line-height: 200px;
+	font-size: 80px;
+	color: white;
+}
+
+.carousel-cell.is-clicked {
+	background: #ed2;
+}
+
+.logger {
+	font-size: 22px;
+	background: #fafafa;
+	padding: 10px;
+	text-align: center;
+} */

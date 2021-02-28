@@ -1,0 +1,100 @@
+extends layout.pug
+block content 
+    .col-12.px-0.pt-4
+        .row.justify-content-center.mx-0.py-3
+            span.page-title Zenkol, Good Friday
+            .w-100.pt-3
+                .row.justify-content-center
+                    .page-title-underline
+        .row.justify-content-center.mx-0.py-3
+            .col-12.col-lg-8.px-2.px-lg-0.p-0.m-0.pt-2.embed-responsive.embed-responsive-16by9
+                iframe.w-100.embed-responsive-item( src='https://www.youtube.com/embed/G8SxzJMVhSk', frameborder='0', allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+                //- iframe(data-ux='Embed', allowfullscreen='', type='text/html', frameborder='0', src='//youtube.com/embed/gO-rI9VIk-k?rel=0&showinfo=0&start=0', data-aid='VIDEO_IFRAME_RENDERED')
+        .row.justify-content-center.mx-0.py-3
+            .col-12.col-sm-10.px-2.px-lg-0.p-0
+                .row.mx-0
+                    .col-12.p-0.m-0.pt-2
+                        p.recipie-Title.mb-0 Zenkol Recipe
+                        p.recipie-ingredient.italic.pt-0.mb-4 Servings 15-18 prs.
+                    .col-lg-6.col-sm-6.col-12.mx-0.px-2.px-lg-0.mb-4
+                        .row.mx-0.h-100
+                            .col-12.p-0.m-0.pt-2
+                                p.recipie-subTitle.mb-1 Ingredients
+                                p.recipie-ingredient.pt-2.mb-0 12 cups Bulgur wheat
+                                p.recipie-ingredient.pt-2.mb-0 1 Kg flour 
+                                p.recipie-ingredient.pt-2.mb-0 2 handfuls salt 
+                                p.recipie-ingredient.pt-2.mb-0 1.5 Kg chopped onions 
+                                p.recipie-ingredient.pt-2.mb-0 Sumac to taste 
+                                p.recipie-ingredient.pt-2.mb-0 1 Kg cooked chickpea
+                    .col-lg-6.col-sm-6.col-12.mx-0.px-2.px-lg-0.mb-4
+                        .row.mx-0.h-100
+                            .col-12.p-0.m-0.pt-2
+                                p.recipie-subTitle.mb-1 What is "Zenkol"?
+                                p.recipie-ingredient.pt-2.mb-0  "Zenkol" means the motion to form a ball. Across Lebanon, many recipes are referred to as zengol, but every village uses different ingredients. Some make them using lentils, others with pumpkins. Although the name is the same, the recipes and dishes are totally different.
+                            .col-12.p-0.m-0.pt-2
+                                p.recipie-subTitle.mb-1 Method
+                                p.recipie-ingredient.pt-2.mb-0 Wash and drain the bulgur wheat. Add flour and salt, mix and knead until homogenous.  
+                                p.recipie-ingredient.pt-2.mb-0 Form the dough into little balls (Zenkol) place in the fridge. 
+                                p.recipie-ingredient.pt-2.mb-0 In a hot pot, place the onions with some olive oil until golden, pour boiling water and wait until the mixture simmers again.
+                                p.recipie-ingredient.pt-2.mb-0 Add the zenkol and the soaked summac. Wait until the water starts to boil. It will thicken.
+                                p.recipie-ingredient.pt-2.mb-0 Taste the Zenkol and sauce, adjust acidity with some more summac or a bit of Lemon Juice to taste. 
+                                p.recipie-ingredient.pt-2.mb-0 When the zenkol’s texture resembles to gnocchi, they are good to go.
+                                p.recipie-ingredient.pt-2.mb-0 Add the pre-cooked chickpeas, wait till they are hot and serve. 
+                    .col-12.p-0.m-0.pt-2
+                        p.recipie-Title.mb-1 Teta Sisi's Tips
+                    .col-lg-8.col-sm-8.col-12.mx-0.px-2.px-lg-0.mb-5
+                        .row.mx-0.h-100
+                            .col-12.p-0.m-0.pt-2
+                                ul.px-3 
+                                    li
+                                        p.recipie-ingredient.pt-2.mb-0 When forming the zenkol: To avoid the dough from sticking to your hands, keep a water container next to you. Lightly dip hands into water every now and then. 
+                                    li
+                                        p.recipie-ingredient.pt-4.mb-0 Flour and Bulgur wheat constantly absorb water. You need to keep diluting the dough when forming it as it will harden when you are not working with it. 
+                                    li
+                                        p.recipie-ingredient.pt-4.mb-0 In order to make the sauce a bit thicker, Siham secretly added some flower to the browning onions.
+        .row.justify-content-center.mx-0.py-3
+            .col-12.col-sm-10.px-0
+                #primary-slider.splide.mx-auto
+                    .splide__track
+                        ul.splide__list
+                            li.splide__slide
+                                img.main-carousel-img(src='./assets/img/savoury/zenkol-goodFriday/2.webp')
+                            li.splide__slide
+                                img.main-carousel-img(src='./assets/img/savoury/zenkol-goodFriday/3.webp')
+                            li.splide__slide
+                                img.main-carousel-img(src='./assets/img/savoury/zenkol-goodFriday/4.webp')
+                            li.splide__slide
+                                img.main-carousel-img(src='./assets/img/savoury/zenkol-goodFriday/5.webp')
+                            li.splide__slide
+                                img.main-carousel-img(src='./assets/img/savoury/zenkol-goodFriday/6.webp')
+                            li.splide__slide
+                                img.main-carousel-img(src='./assets/img/savoury/zenkol-goodFriday/1.webp')
+                            li.splide__slide
+                                img.main-carousel-img(src='./assets/img/savoury/zenkol-goodFriday/7.webp')
+                            li.splide__slide
+                                img.main-carousel-img(src='./assets/img/savoury/zenkol-goodFriday/8.webp')
+                            li.splide__slide
+                                img.main-carousel-img(src='./assets/img/savoury/zenkol-goodFriday/9.webp')
+                            
+                            
+                #secondary-slider.splide.my-3.mx-auto
+                    .splide__track
+                        ul.splide__list
+                            li.splide__slide
+                                img.main-carousel-img(src='./assets/img/savoury/zenkol-goodFriday/2.webp')
+                            li.splide__slide
+                                img.main-carousel-img(src='./assets/img/savoury/zenkol-goodFriday/3.webp')
+                            li.splide__slide
+                                img.main-carousel-img(src='./assets/img/savoury/zenkol-goodFriday/4.webp')
+                            li.splide__slide
+                                img.main-carousel-img(src='./assets/img/savoury/zenkol-goodFriday/5.webp')
+                            li.splide__slide
+                                img.main-carousel-img(src='./assets/img/savoury/zenkol-goodFriday/6.webp')
+                            li.splide__slide
+                                img.main-carousel-img(src='./assets/img/savoury/zenkol-goodFriday/1.webp')
+                            li.splide__slide
+                                img.main-carousel-img(src='./assets/img/savoury/zenkol-goodFriday/7.webp')
+                            li.splide__slide
+                                img.main-carousel-img(src='./assets/img/savoury/zenkol-goodFriday/8.webp')
+                            li.splide__slide
+                                img.main-carousel-img(src='./assets/img/savoury/zenkol-goodFriday/9.webp')

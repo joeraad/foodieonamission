@@ -1,0 +1,241 @@
+doctype html
+block html
+    html
+        block head
+            head
+                title=headerTitle
+                block meta
+                    meta(charset='utf-8')
+                    meta(name='description', content=metaDescription)
+                    meta(name='author', content='foodieonamission')
+                    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+                    meta(property='og:site_name', content='Foodieonamission')
+                    meta(property='og:url', content='https://foodieonamission.com/'+pageURL)
+                    meta(property='og:title', content=headerTitle)
+                    meta(property='og:description', content=metaDescription)
+                    meta(property='og:image', content='https://foodieonamission.com/assets/img/fomLogo.png')
+                    meta(property='og:type', content='website')
+                                        
+                    meta(name='twitter:card', content='summary')
+                    meta(name='twitter:title', content=headerTitle)                    
+                    meta(name='twitter:description', content=metaDescription)
+                    meta(name='twitter:image', content='https://foodieonamission.com/assets/img/fomLogo.png')
+                    meta(name='twitter:image:alt', content='foodieonamission')
+                // style
+                block style
+                    link(rel='preconnect', href='https://fonts.gstatic.com')
+                    link(href='https://fonts.googleapis.com/css2?family=Fjalla+One&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap', rel='stylesheet')
+
+                    link(rel='stylesheet' href='/assets/bower_components/bootstrap/dist/css/bootstrap.css')
+                    //- link(type='text/css', rel='stylesheet', href='./assets/js/plugins/lightslider/dist/css/lightslider.css')
+                    link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css')
+                    link(rel='stylesheet', href='/assets/css/bootstrap.css', type='text/css')
+                    link(rel='stylesheet', href='/assets/css/i-con.css', type='text/css')
+                    link(rel='stylesheet', href='/assets/css/theme.css', type='text/css')
+                    link(rel='stylesheet', href='/assets/css/style.css', type='text/css')
+                    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.css', type='text/css')
+                    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.17/css/bootstrap-select.min.css')
+                    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T', crossorigin='anonymous')
+                    link(rel='stylesheet', href='/assets/css/main.css', type='text/css')
+                                        
+                    link(rel='icon', href='/assets/img/fomLogo16x16.webp', sizes='16x16')
+                    link(rel='icon', href='/assets/img/fomLogo24x24.webp', sizes='24x24')
+                    link(rel='icon', href='/assets/img/fomLogo32x32.webp', sizes='32x32')
+                    link(rel='icon', href='/assets/img/fomLogo48x48.webp', sizes='48x48')
+                    link(rel='icon', href='/assets/img/fomLogo64x64.webp', sizes='64x64')
+        block body
+            body.layout-column(style="overflow-y: auto; overflow-x: hidden;")
+                if(title=="Home")
+                    .position-absolute.d-none.d-lg-block(style="top:88vh; left:50%; z-index:20;")
+                        img.scroll-icon(src="./assets/img/icons/scroll.png")
+                block header
+                header.header.position-sticky.sticky-top.w-100.bg-white(style="z-index:10;")
+                    #navbar.navbar.navbar-expand-lg.px-0.mx-0.py-0.px-1.mx-1.px-lg-2.mx-lg-2.h-100
+                        .row.justify-content-lg-center.justify-content-start.w-100.px-1.mx-1.align-items-center
+                            // btn to toggle sidenav on small screen
+                            //- a.d-lg-none.i-con-h-a.px-1(data-toggle='modal', data-target='#aside')
+                                i.i-con.i-con-menu.text-muted
+                            // brand
+                            a.nav-link.hidden-folded.d-lg-inline.p-0.mx-2.d-none(href="/",style="text-decoration:none;")
+                                .row.align-items-center.mx-0
+                                    span.navbar-Text.no-border.pl-2(class=""+(title=="Home"?"active":"")) Home
+                            div.d-lg-inline-flex.d-none.dropdown
+                                    a.nav-link.hidden-folded.d-lg-inline-flex.p-0.mx-2.d-none.dropdown-toggle.align-items-center(data-toggle='dropdown', href="#",style="text-decoration:none;")
+                                        .row.align-items-center.mx-0
+                                            span.navbar-Text.no-border.pl-2 Recipies
+                                    .dropdown-menu.mt-2.py-0.w-fit.animate.fadeIn.bg-header(style="min-width:fit-content;")
+                                        a(href="/savoury").navbar-Text
+                                            .row.mx-0.mb-2.px-3.py-2.navbar-Text.no-border.pl-2.w-fit(class=""+(title=="Savoury"?"active":""))
+                                                | Savoury
+                                        a(href="/sweets").navbar-Text
+                                            .row.mx-0.mb-2.px-3.py-2.navbar-Text.no-border.pl-2.w-fit(class=""+(title=="Sweets"?"active":""))
+                                                | Sweets
+                            a.nav-link.hidden-folded.d-lg-inline.p-0.mx-2.d-none(href="/hidden-crumbs",style="text-decoration:none;")
+                                .row.align-items-center.mx-0
+                                    span.navbar-Text.no-border.pl-2(class=""+(title=="Hidden Crumbs"?"active":""))  Hidden Crumbs
+                            a.nav-link.hidden-folded.d-lg-inline.p-0.mx-2.d-none(href="/about-us",style="text-decoration:none;")
+                                .row.align-items-center.mx-0
+                                    span.navbar-Text.no-border.pl-2(class=""+(title=="About Us"?"active":""))  About Us
+                            a.nav-link.hidden-folded.d-lg-inline.p-0.mx-2.d-none(href="/blog",style="text-decoration:none;")
+                                .row.align-items-center.mx-0
+                                    span.navbar-Text.no-border.pl-2(class=""+(title=="Blog"?"active":""))  Blog
+                            a.nav-link.hidden-folded.d-lg-inline.p-0.mx-2.d-none(href="/media",style="text-decoration:none;")
+                                .row.align-items-center.mx-0
+                                    span.navbar-Text.no-border.pl-2(class=""+(title=="Media"?"active":""))  Media
+                            //- a.nav-link.hidden-folded.d-lg-inline.p-0.mx-2.d-none( href="/contact-us",style="text-decoration:none;")
+                                .row.align-items-center.mx-0
+                                    span.navbar-Text.no-border.pl-2(class=""+(title=="Contact Us"?"active":""))  Contact Us
+                            div.w-100
+                                ul.nav.navbar-menu.order-1.order-lg-2.h-100.d-inline.d-lg-none.w-100
+                                    li.nav-item
+                                        .row.mx-0.align-items-center.h-100.w-100
+                                            svg.navbarToggle-svg(onclick='openNav()' style='cursor:pointer' xmlns='http://www.w3.org/2000/svg', width='25', height='25', viewbox='0 0 24 24', stroke-width='2', stroke-linecap='round', stroke-linejoin='round', icon='')
+                                                line(x1='3', y1='12', x2='21', y2='12')
+                                                line(x1='3', y1='6', x2='21', y2='6')
+                                                line(x1='3', y1='18', x2='21', y2='18')
+                                            if(title!="Home")
+                                                a.brand-title.navbar.mx-auto(href="/") foodie on a mission
+                block mainLayout
+                    #main.layout-row.flex
+                        block sidenav
+                            #mySidenav.sidenav
+                                a.closebtn(href='javascript:void(0)', onclick='closeNav()') &times;
+                                .row.mx-0.align-items-center
+                                    .col-12.sideNav-text-container.py-3
+                                        a.nav-link.hidden-folded.d-block.p-0.mx-2.no-border(href="/",style="text-decoration:none;")
+                                            .row.align-items-center.mx-0
+                                                span.navbar-Text.no-border.pl-2.sideNav(class=""+(title=="Home"?"active":"")) Home
+                                    .col-12.sideNav-text-container.py-3
+                                        a.nav-link.hidden-folded.p-0.mx-2.sideNavDropdownToggle.no-border#sideNav-recipies( style="text-decoration:none;")
+                                            .row.align-items-center.mx-0.justify-content-between
+                                                span.navbar-Text.no-border.pl-2.sideNav Recipies
+                                                svg.navbar-Text.no-border.sideNav.chevron#sideNav-recipies-chevron(style="transform:rotate(0deg)" viewbox='0 0 24 24', fill='currentColor', width='16', height='16')
+                                                    path(fill-rule='evenodd', d='M19.544 7.236a.773.773 0 0 1-.031 1.06l-7.883 7.743-7.42-7.742a.773.773 0 0 1 0-1.061.699.699 0 0 1 1.017 0l6.433 6.713 6.868-6.745a.698.698 0 0 1 1.016.032')
+                                        .sideNavDropdown.mt-2.py-0.w-fit(style="height:0px;opacity:0")
+                                            a(href="/savoury")
+                                                .row.mx-0.mb-2.px-3.py-2
+                                                    span.navbar-Text.no-border.pl-2.sideNav(class=""+(title=="Savoury"?"active":"")) Savoury
+                                            a(href="/sweets")
+                                                .row.mx-0.mb-2.px-3.py-2
+                                                    span.navbar-Text.no-border.pl-2.sideNav(class=""+(title=="Sweets"?"active":"")) Sweets
+                                    .col-12.sideNav-text-container.py-3
+                                        a.nav-link.hidden-folded.d-block.p-0.mx-2.no-border(href="/hidden-crumbs",style="text-decoration:none;")
+                                            .row.align-items-center.mx-0
+                                                span.navbar-Text.no-border.pl-2.sideNav(class=""+(title=="Hidden Crumbs"?"active":"")) Hidden Crumbs
+                                    .col-12.sideNav-text-container.py-3
+                                        a.nav-link.hidden-folded.d-block.p-0.mx-2.no-border(href="/about-us",style="text-decoration:none;")
+                                            .row.align-items-center.mx-0
+                                                span.navbar-Text.no-border.pl-2.sideNav(class=""+(title=="About Us"?"active":"")) About Us
+                                    .col-12.sideNav-text-container.py-3
+                                        a.nav-link.hidden-folded.d-block.p-0.mx-2.no-border(href="/blog",style="text-decoration:none;")
+                                            .row.align-items-center.mx-0
+                                                span.navbar-Text.no-border.pl-2.sideNav(class=""+(title=="Blog"?"active":"")) Blog
+                                    .col-12.sideNav-text-container.py-3
+                                        a.nav-link.hidden-folded.d-block.p-0.mx-2.no-border(href="/media",style="text-decoration:none;")
+                                            .row.align-items-center.mx-0
+                                                span.navbar-Text.no-border.pl-2.sideNav(class=""+(title=="Media"?"active":"")) Media
+                                    //- .col-12.py-3
+                                        a.nav-link.hidden-folded.d-block.p-0.mx-2.no-border( href="/contact-us",style="text-decoration:none;")
+                                            .row.align-items-center.mx-0
+                                                span.navbar-Text.no-border.pl-2.sideNav(class=""+(title=="Contact Us"?"active":"")) Contact Us
+                        #content.flex()
+                            #page.page.py-0.pl-0.pr-0()
+                                block brand
+                                    .col-12.px-0.py-4.d-none.d-lg-block.position-relative
+                                        .row.justify-content-center.mx-0.position-relative.h-100.align-items-center(style="z-index:1")
+                                            a.brand-title(href="/") foodie on a mission
+                                        .w-100.h-100.brand-bg.position-absolute(style="z-index:0;top:0px")
+                                block content
+            block foot
+                footer.footer.py-4.position-relative
+                    .w-100.h-100.brand-bg.position-absolute(style="z-index:0;top:0px")
+                    .row.mx-0.w-100.justify-content-center.pb-3.position-relative(style="z-index:0;top:0px")
+                        .col-lg-4.col-12
+                            .row.mx-0.justify-content-center
+                                span.footer-title We'd love to hear form you
+                            .row.mx-0 
+                                span.footer-text Want to be featured in one of our videos, ask about a recipe, or refer to a Lebanese hidden crumb we haven't  highlighted yet? 
+                            .row.mx-0
+                                span.footer-text Drop us a line at 
+                                a.footer-text.link.ml-auto(href='mailto:foodieonamissionlb@gmail.com') foodieonamissionlb@gmail.com
+                            .row.mx-0 
+                                span.footer-text or give us a call on
+                                a.footer-text.link.ml-auto(href='tel:+961 3 429 792') +961 3 429 792
+                        .col-lg-4.col-12
+                            .h-100.d-flex.flex-column
+                                .row.mx-0.justify-content-center
+                                    span.footer-title Follow us on
+                                .row.mx-0.align-items-center.justify-content-center.flex-grow-1
+                                    a.mx-2(rel='noopener', typography='LinkAlpha', role='link', aria-haspopup='true', data-ux='Link', target='_blank', data-aid='FOOTER_FACEBOOK_LINK', aria-label='Facebook', href='https://www.facebook.com/202145736863787', data-tccl='ux2.FOOTER.footer1.Layout.Default.Link.Default.26058.click,click')
+                                        svg(viewbox='0 0 24 24', fill='currentColor', width='50', height='50', data-ux='IconSocial')
+                                            g
+                                                path(d='M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.093 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.563V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z', fill='#1877F2')
+                                                path(d='M15.893 14.89l.443-2.89h-2.773v-1.875c0-.79.387-1.563 1.63-1.563h1.26v-2.46s-1.144-.196-2.238-.196c-2.284 0-3.777 1.385-3.777 3.89V12h-2.54v2.89h2.54v6.988a10.04 10.04 0 003.124 0v-6.987h2.33z', fill='#fff')
+                                    a.mx-2(rel='noopener', typography='LinkAlpha', role='link', aria-haspopup='true', data-ux='Link', target='_blank', data-aid='FOOTER_INSTAGRAM_LINK', aria-label='Instagram', href='https://www.instagram.com/foodieonamissionlb', data-tccl='ux2.FOOTER.footer1.Layout.Default.Link.Default.26059.click,click')
+                                        svg(viewbox='0 0 24 24', fill='currentColor', width='50', height='50', data-ux='IconSocial')
+                                            g
+                                                path(fill='#E1306C', d='M12 2c5.523 0 10 4.476 10 10 0 5.523-4.477 10-10 10-5.522 0-10-4.477-10-10C2 6.478 6.478 2 12 2z')
+                                                path(fill='#fff', fill-rule='evenodd', d='M17.762 14.335c.025-.45.038-1.262.038-2.435s-.013-1.985-.038-2.435c-.052-1.066-.37-1.89-.953-2.474-.584-.584-1.408-.901-2.474-.953C13.885 6.013 13.073 6 11.9 6s-1.985.013-2.435.038c-1.066.052-1.89.37-2.474.953-.584.584-.901 1.408-.953 2.474C6.013 9.915 6 10.727 6 11.9s.013 1.985.038 2.435c.052 1.066.37 1.89.953 2.474.584.584 1.408.901 2.474.953.45.025 1.262.038 2.435.038s1.985-.013 2.435-.038c1.066-.052 1.89-.37 2.474-.953.584-.584.901-1.408.953-2.474zM11.9 7.06l-.588-.004a41.691 41.691 0 00-.81 0c-.185.003-.432.01-.742.023a6.09 6.09 0 00-.79.077 3.08 3.08 0 00-.55.142 1.993 1.993 0 00-.676.446c-.195.195-.343.42-.446.676a3.08 3.08 0 00-.142.55 6.09 6.09 0 00-.077.79c-.012.31-.02.557-.023.742-.002.184-.002.454 0 .81l.004.588-.004.588c-.002.356-.002.626 0 .81.003.185.01.432.023.742s.039.573.077.79c.039.219.086.402.142.55a2.001 2.001 0 001.122 1.122c.148.056.332.103.55.142.217.038.48.064.79.077.31.012.557.02.742.023.184.002.454.002.81 0l.588-.004.588.004c.356.002.626.002.81 0 .185-.003.432-.01.742-.023a6.09 6.09 0 00.79-.077c.219-.039.402-.086.55-.142a2.001 2.001 0 001.122-1.122c.056-.148.103-.332.142-.55a6.09 6.09 0 00.077-.79c.012-.31.02-.557.023-.742.002-.184.002-.454 0-.81l-.004-.588.004-.588c.002-.356.002-.626 0-.81-.003-.185-.01-.432-.023-.742a6.09 6.09 0 00-.077-.79 3.083 3.083 0 00-.142-.55 1.993 1.993 0 00-.446-.676 1.992 1.992 0 00-.676-.446 3.08 3.08 0 00-.55-.142 6.09 6.09 0 00-.79-.077 28.51 28.51 0 00-.742-.023 41.691 41.691 0 00-.81 0l-.588.004zm3.65 2.19a.68.68 0 00.207-.5.68.68 0 00-.208-.5.68.68 0 00-.5-.207.68.68 0 00-.499.208.68.68 0 00-.207.5c0 .194.07.36.207.499a.68.68 0 00.5.207.68.68 0 00.5-.207zm-.623 2.65c0 .84-.295 1.554-.884 2.143a2.918 2.918 0 01-2.143.884c-.84 0-1.554-.295-2.143-.884a2.918 2.918 0 01-.884-2.143c0-.84.295-1.554.884-2.143a2.919 2.919 0 012.143-.884c.84 0 1.554.295 2.143.884.59.589.884 1.303.884 2.143zm-1.06 0a1.89 1.89 0 00-.577-1.39 1.895 1.895 0 00-1.39-.577c-.543 0-1.006.192-1.39.576a1.895 1.895 0 00-.577 1.391c0 .543.192 1.006.576 1.39.385.385.848.577 1.391.577s1.006-.192 1.39-.577a1.89 1.89 0 00.577-1.39z')
+                                    a.mx-2(rel='noopener', typography='LinkAlpha', role='link', aria-haspopup='true', data-ux='Link', target='_blank', data-aid='FOOTER_YOUTUBE_LINK', aria-label='YouTube', href='https://www.youtube.com/channel/UCqD_IhgYPIHpL4Mf2ZNUb-A?', data-tccl='ux2.FOOTER.footer1.Layout.Default.Link.Default.26060.click,click')
+                                        svg(viewbox='0 0 24 24', fill='currentColor', width='50', height='50', data-ux='IconSocial')
+                                            g
+                                                path(d='M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10A10 10 0 0012 2z', fill='#FF0000')
+                                                path(fill-rule='evenodd', d='M17.607 14.302s.066-.931.066-1.866l.003-.88c0-.93-.069-1.865-.069-1.865a2.363 2.363 0 00-.436-1.146 1.702 1.702 0 00-1.16-.52c-1.615-.116-4.025-.149-4.025-.149s-2.422.033-4.037.15c-.436.012-.85.193-1.156.505-.335.349-.364 1.153-.364 1.153s-.033.942-.033 1.876v.884c0 .93.033 1.865.033 1.865.033.413.177.809.418 1.146.344.31.788.484 1.251.49.924.088 3.913.117 3.913.117s2.418-.004 4.033-.12c.433-.004.847-.18 1.152-.488.242-.338.384-.737.411-1.152zm-3.68-2.422l-3.116 1.614-.004-3.24 3.12 1.626z', fill='#fff')
+                    .row.mx-0.w-100.justify-content-center.footer-text.small
+                        | Copyright © 2021 foodieonamission - All Rights Reserved.
+        block scripts
+            script(src='./libs/popper.js/dist/umd/popper.min.js')
+            script(src='https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.js')
+            script(src='https://js.stripe.com/v3/')
+            // build:js ./assets/js/site.min.js
+            // jQuery
+            script(src='./libs/jquery/dist/jquery.min.js')
+            // Bootstrap
+            script(src='./libs/popper.js/dist/umd/popper.min.js')
+            script(src='./libs/bootstrap/dist/js/bootstrap.min.js')
+            // ajax page
+            script(src='./libs/pace-progress/pace.min.js')
+            script(src='./libs/pjax/pjax.js')
+            script(src='./assets/js/ajax.js')
+            // lazyload plugin
+            script(src='./assets/js/lazyload.config.js')
+            script(src='./assets/js/lazyload.js')
+            script(src='./assets/js/plugin.js')
+            // theme
+            script(src='./assets/js/theme.js')
+            script(src='./assets/js/main.js')
+            script(src='https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js')
+            script.
+                document.addEventListener( 'DOMContentLoaded', function () {
+                    if(document.getElementById("secondary-slider")!=null){
+                        var secondarySlider = new Splide( '#secondary-slider', {
+                            fixedWidth : 100,
+                            height     : 60,
+                            gap        : 10,
+                            rewind     : true,
+                            arrows     :false,
+                            cover      : true,
+                            pagination : false,
+                            focus      : 'center',
+                            isNavigation: true,
+                            autoplay:true,
+                            breakpoints : {
+                                '600': {
+                                    fixedWidth: 66,
+                                    height    : 40,
+                                }
+                            }
+                        } ).mount();
+                        if(document.getElementById("primary-slider")!=null){
+                            var primarySlider = new Splide( '#primary-slider', {
+                                type       : 'fade',
+                                heightRatio: 0.5,
+                                pagination : false,
+                                rewind     : true,
+                                arrows     : true,
+                                cover      : true,
+                            } ); // do not call mount() here.
+                            primarySlider.sync( secondarySlider ).mount();
+                        }
+                    }
+                } );
