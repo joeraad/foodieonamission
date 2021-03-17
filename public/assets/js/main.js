@@ -38,4 +38,5 @@ if (document.getElementById("sideNav-recipies") != null) {
 			}
 		});
 }
+
 //  <div class="align-baseline mx-auto no-grow offset-1 flex flex-row position-absolute"></div>

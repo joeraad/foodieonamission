@@ -154,7 +154,6 @@
 	.home-page-landing {
 		min-height: fit-content;
 		min-height: -moz-fit-content;
-		
 	}
 }
 .description-bg {
@@ -432,4 +431,116 @@
 }
 .recipie-ingredient.small {
 	font-size: 14px;
+}
+
+.grid-sizer {
+	width: 30%;
+}
+.grid-item {
+	width: 30%;
+	margin-bottom: 10px;
+}
+
+.grid-item {
+	float: left;
+}
+
+.grid-item img {
+	display: block;
+	max-width: 100%;
+}
+/* =============================================================== */
+
+/* The Close Button */
+.close {
+	color: white;
+	position: absolute;
+	top: 10px;
+	right: 25px;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #999;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+	display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.prev {
+	left: 0;
+}
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* Caption text */
+.caption-container {
+	text-align: center;
+	background-color: black;
+	padding: 2px 16px;
+	color: white;
+}
+
+img.slides {
+	max-width: 50vw;
+	max-height: 90vh;
+}
+
+.active,
+.demo:hover {
+	opacity: 1;
+}
+
+img.hover-shadow {
+	transition: 0.3s;
+}
+img.cursor-pointer {
+	cursor: pointer;
+}
+
+.hover-shadow:hover {
+	box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.2), 0 0px 20px 0 rgba(0, 0, 0, 0.19);
 }

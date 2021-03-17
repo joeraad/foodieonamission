@@ -2,6 +2,12 @@
 
 All notable changes to the website will be documented in this file.
 
+## 2021-03-17
+
+### Added
+
+- portfolio page
+
 ## 2021-02-28
 
 ### Changed

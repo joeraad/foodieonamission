@@ -246,6 +246,15 @@ app.get("/media", (req, res) => {
 			"Foodie on a mission keeps traditional recipes alive by documenting home made Lebanese dishes and hidden crumbs.",
 	});
 });
+app.get("/portfolio", (req, res) => {
+	res.render("portfolio", {
+		pageURL: "portfolio",
+		title: "Portfolio",
+		headerTitle: "Portfolio | foodieonamission",
+		metaDescription:
+			"Foodie on a mission keeps traditional recipes alive by documenting home made Lebanese dishes and hidden crumbs.",
+	});
+});
 // app.get("/contact-us", (req, res) => {
 // 	res.render("contactUs", {
 // 		pageURL: "contact-us",
