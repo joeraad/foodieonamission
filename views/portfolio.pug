@@ -35,7 +35,7 @@ block content
         //-         // Next/previous controls
         //-         a.prev(onclick='plusSlides(-1)') &#x276E;
         //-         a.next(onclick='plusSlides(1)') &#x276F;
-        .row.justify-content-center.mx-0.py-3.w-100
+        .row.justify-content-center.mx-2.mx-lg-0.py-3.w-100
             .col-12.col-sm-10.px-0.w-100
                 .row.mx-0.w-100
                     .grid.w-100
@@ -194,13 +194,13 @@ append scripts
                 var grid = document.querySelector('.grid');
 
                 var msnry = new Masonry( grid, {
-                itemSelector: '.grid-item',
-                columnWidth: '.grid-sizer',
-                percentPosition: true,
-                gutter: 10,
+                    itemSelector: '.grid-item',
+                    columnWidth: '.grid-sizer',
+                    percentPosition: true,
+                    gutter: 10,
                 });
 
                 imagesLoaded( grid ).on( 'progress', function() {
-                msnry.layout();
+                    msnry.layout();
                 });
             });

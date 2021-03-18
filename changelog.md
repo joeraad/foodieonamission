@@ -2,11 +2,22 @@
 
 All notable changes to the website will be documented in this file.
 
+## 2021-03-18
+
+### Added
+
+- Portfolio page link in navigation
+
+### Changed
+
+- Portfolio page images grid sizing
+- Portfolio page images grid padding on mobile devices
+
 ## 2021-03-17
 
 ### Added
 
-- portfolio page
+- Portfolio page
 
 ## 2021-02-28
 
