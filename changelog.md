@@ -2,6 +2,16 @@
 
 All notable changes to the website will be documented in this file.
 
+## 2023-04-25
+
+### Added
+
+- `/portfolio` endpoint redirects to another website for full portfolio
+
+### Changed
+
+- Portfolio navigation endpoint changed to `/foodie-portfolio`
+
 ## 2021-03-18
 
 ### Added
@@ -19,7 +29,7 @@ All notable changes to the website will be documented in this file.
 
 - Portfolio page
 
-## 2021-02-28
+## 2021-02-29
 
 ### Changed
 
